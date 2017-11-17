@@ -18,7 +18,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="css/estiloshome.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <style type="text/css">
+        footer {
+            background-color: black;
+        }
+        #footer1 {
+            height: 82vh;
+        }
+        #parrafo{
+          color: lightblue;
+        }
+    </style>
 
 </head>
 
@@ -126,6 +136,35 @@
         </div>
     </div>
 </section>
+<div id="footer1">
+</div>
+
+<footer class="footer p-t-1">
+    <div class="container">
+        <div class="pull-right">
+            <nav class="navbar" style="background:transparent; color: black;">
+                <nav class="nav navbar-nav izquierda">
+                    <a class="nav-item nav-link" href="#">Home</a>
+                    <a class="nav-item nav-link" href="#">Contacto</a>
+                    <p id="parrafo">Diagnostico Coches Team©</p>
+
+                </nav>
+            </nav>
+        </div>
+
+        <a href="http:\\facebook.es"><i class="fa fa-facebook-official fa-2x"></i></a>
+        <a href="http:\\pinterest.com"><i class="fa fa-pinterest-p fa-2x"></i></a>
+        <a href="http:\\twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="http:\\flickr.com"><i class="fa fa-flickr fa-2x"></i></a>
+        <a href="http:\\linkedin.com"><i class="fa fa-linkedin fa-2x"></i></a>
+
+        <p class="h6">
+            Hecho por: Julen,Sergio y Asier-2017
+            <a href="http://www.paradigmOz.com" target="_blank"></a>
+        </p>
+    </div>
+</footer>
+
 
 </body>
 
