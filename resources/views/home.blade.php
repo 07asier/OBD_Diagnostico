@@ -147,8 +147,8 @@
         <div class="pull-right">
             <nav class="navbar" style="background:transparent; color: black;">
                 <nav class="nav navbar-nav izquierda">
-                    <a class="nav-item nav-link" href="#">Home</a>
-                    <a class="nav-item nav-link" href="#">Contacto</a>
+                    <a class="nav-item nav-link" href="#navbar">Home</a>
+                    <a class="nav-item nav-link" href="contact">Contacto</a>
                     <p id="parrafo">Diagnostico Coches Team©</p>
 
                 </nav>
