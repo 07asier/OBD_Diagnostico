@@ -52,4 +52,13 @@ h1{
     font-family: proxima-nova, sans-serif;
     color : white
 }
+#titulo{
+    color: #f05f40;
+}
+#menus:hover{
+    color: #f05f40;
+}
+#navbar{
+    background-color: white;
+}
 
