@@ -31,7 +31,124 @@
         #parrafo{
           color: lightblue;
         }
+
+        @import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+$red: #e74c3c;
+
+*, 
+*:before, 
+*:after {
+   @include box-sizing(border-box); 
+}
+
+
+h1 {
+   text-align: center;
+   color: #a8a8a8;
+   @include text-shadow(1px 1px 0 rgba(white, 1));
+}
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+  font-family: 'Merriweather', sans-serif;
+  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     @include border-radius(8px);
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     @include box-shadow(0 1px 1px rgba(black, 0.1));
+     resize: none;
+    
+    &:focus {
+       @include box-shadow(0 0px 2px rgba($red, 1)!important);
+    }
+  }
+  
+  #input-submit {
+     color: white; 
+     background: $red;
+     cursor: pointer;
+    
+    &:hover {
+       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  }
+  #input-clear {
+     color: white; 
+     background: $red;
+     cursor: pointer;
+    
+    &:hover {
+       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  }
+  
+  textarea {
+      height: 126px;
+  }
+}
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
     </style>
+
+    <script type="text/javascript">
+        
+    function limpiar() { 
+        document.getElementById('form').reset(); 
+      } 
+      function enviar(event){ 
+        let nom = document.getElementById('form').elements; 
+        for (var i = 0; i < nom.length; i++) { 
+            //nom.elements[i].value; 
+            if (nom[i].value === "") { 
+              nom[i].style.backgroundColor = "red"; 
+              event.preventDefault(); 
+            } 
+        } 
+ 
+      } 
+
+    </script>
 
 </head>
 
@@ -67,81 +184,28 @@
         <div class="row">
             <div >
                 <h1 class="text-uppercase">
-                    <p>OBTEN LA INFO DE TU COCHE.</p>
-                    <p>EN UN ABRIR Y CERRAR DE OJOS.</p>
+                    <p>CONTACTO</p>
+                    <h3>Póngase en contacto con nosotros</h3>
+                    
                 </h1>
+        
+<form class="cf" onsubmit="enviar(event)">
+  <div class="half left cf">
+    <input type="text" id="input-name" placeholder="Nombre">
+    <input type="email" id="input-email" placeholder="Email">
+    <input type="text" id="input-subject" placeholder="Asunto">
+  </div>
+  <div class="half right cf">
+    <textarea name="message" type="text" id="input-message" placeholder="Mensaje"></textarea>
+  </div>
+  <input type="submit" value="Submit" id="input-submit">
+  <input type="submit" value="Clear" id="input-clear" onclick="limpiar()">
+</form>
 
-            </div>
-            <div>
-
-                <p class="blanco">¿Quieres conocernos?</p>
-                <a class="btn btn-primary btn-lg active"  aria-pressed="true" href="#services">Descubrenos</a>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">¿Por qué nosotros?</h2>
-                <hr class="my-4">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box mt-5 mx-auto">
-                    <img src="images/icons/fast.png"> </img>
-                    <h3>Rápido</h3>
-                    <p class="text-muted mb-0">Diagnóstico a tiempo real</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box mt-5 mx-auto">
-                    <img src="images/icons/security.png"> </img>
-                    <h3 >Fiable</h3>
-                    <p class="text-muted mb-0">Servicio 100% fiable</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box mt-5 mx-auto">
-                    <img src="images/icons/coche.png"> </img>
-                    <h3>Multifuncional</h3>
-                    <p class="text-muted mb-0">Ofrecemos la posibilidad de añadir varios coches</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box mt-5 mx-auto">
-                    <img src="images/icons/easy.png"> </img>
-                    <h3>Accesibilidad</h3>
-                    <p class="text-muted mb-0">Fácil acceso a los datos</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr class="my-4">
-</section>
-
-<section>
-    <div class="container my-auto">
-        <div class="row">
-            <div>
-                <h3 class="text-center">Quiénes somos</h3>
-                <p class="text-center">Somos una pequeña empresa del ámbito automovilistico, que analizamos a tiempo real(a través de 4G) los datos de un coche.Mediante un <a href="https://es.wikipedia.org/wiki/OBD">OBD-II </a> almacenamos los datos en la <a href="https://es.wikipedia.org/wiki/Computaci%C3%B3n_en_la_nube" >nube</a>, y luego los plasmamos en ésta aplicación web. Es un servicio rápido, fiable y sobre todo sencillo de usar. Ofrecemos la opción de añadir más de un vehiculo a la aplicación. </p>
-                <h3 class="text-center">Cómo funciona</h3>
-                <p class="text-center"><li><strong>Paso 1:</strong></li> </br> Enchufar el OBD-II en la ranura del coche </p>
-                <p class="text-center"><li><strong>Paso 2:</strong></li> </br> Introducir el número de serie del OBD-II en el coche, y configurar los datos del coche. </p>
-                <p class="text-center"><li><strong>Paso 3:</strong></li> </br> Listo! </p>
-            </div>
-        </div>
-    </div>
+           
 </section>
 <div id="footer1">
-</div>
+
 
 <footer class="footer p-t-1">
     <div class="container">
@@ -167,6 +231,7 @@
             <a href="http://www.paradigmOz.com" target="_blank"></a>
         </p>
     </div>
+</div>
 </footer>
 
 
