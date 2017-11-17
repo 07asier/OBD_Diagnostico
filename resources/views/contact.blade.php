@@ -169,7 +169,7 @@ form {
             <ul class="nav navbar-nav">
                 <li><a href="" id="menus">Inicio</a></li>
                 <li><a href="" id="menus">Quienes somos</a></li>
-                <li><a href="contact" id="menus">Quienes somos</a></li>
+                <li><a href="contact" id="menus">Contacto</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="register2" id="menus"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
