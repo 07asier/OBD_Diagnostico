@@ -188,6 +188,10 @@ form {
                     <h3>Póngase en contacto con nosotros</h3>
                     
                 </h1>
+               </div>
+        </div>
+       </div>
+      </header>
         
 <form class="cf" onsubmit="enviar(event)">
   <div class="half left cf">
