@@ -29,3 +29,6 @@ Route::get('/login2', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/admin', function (){
+    return view('auth/adminLogin');
+});
