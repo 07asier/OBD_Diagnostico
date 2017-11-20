@@ -21,6 +21,8 @@
     <!-- Estilos del footer -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- Estilos del form -->
+    <link href="css/form.css" rel="stylesheet">
     <style type="text/css">
         footer {
             background-color: black;
@@ -32,112 +34,16 @@
           color: lightblue;
         }
 
-        @import "compass/css3";
-
-@import url(https://fonts.googleapis.com/css?family=Merriweather);
-$red: #e74c3c;
-
-*, 
-*:before, 
-*:after {
-   @include box-sizing(border-box); 
-}
-
-
-h1 {
-   text-align: center;
-   color: #a8a8a8;
-   @include text-shadow(1px 1px 0 rgba(white, 1));
-}
-
-form {
-   max-width: 600px;
-   text-align: center;
-   margin: 20px auto;
-  font-family: 'Merriweather', sans-serif;
-  
-  input, textarea {
-     border:0; outline:0;
-     padding: 1em;
-     @include border-radius(8px);
-     display: block;
-     width: 100%;
-     margin-top: 1em;
-     font-family: 'Merriweather', sans-serif;
-     @include box-shadow(0 1px 1px rgba(black, 0.1));
-     resize: none;
-    
-    &:focus {
-       @include box-shadow(0 0px 2px rgba($red, 1)!important);
-    }
-  }
-  
-  #input-submit {
-     color: white; 
-     background: $red;
-     cursor: pointer;
-    
-    &:hover {
-       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
-    }
-  }
-  #input-clear {
-     color: white; 
-     background: $red;
-     cursor: pointer;
-    
-    &:hover {
-       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
-    }
-  }
-  
-  textarea {
-      height: 126px;
-  }
-}
-
-
-.half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
-}
-
-.right { width: 50%; }
-
-.left {
-     margin-right: 2%; 
-}
-
-
-@media (max-width: 480px) {
-  .half {
-     width: 100%; 
-     float: none;
-     margin-bottom: 0; 
-  }
-}
-
-
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
+        
     </style>
 
     <script type="text/javascript">
         
     function limpiar() { 
-        document.getElementById('form').reset(); 
+        document.getElementById('formulario').reset(); 
       } 
       function enviar(event){ 
-        let nom = document.getElementById('form').elements; 
+        let nom = document.getElementById('formulario').elements; 
         for (var i = 0; i < nom.length; i++) { 
             //nom.elements[i].value; 
             if (nom[i].value === "") { 
@@ -193,7 +99,7 @@ form {
        </div>
       </header>
         
-<form class="cf" onsubmit="enviar(event)">
+<form id="formulario" class="cf" onsubmit="enviar(event)">
   <div class="half left cf">
     <input type="text" id="input-name" placeholder="Nombre">
     <input type="email" id="input-email" placeholder="Email">
